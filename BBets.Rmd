@@ -75,9 +75,16 @@ The confidence level is 'r mean(STeach)' and r sd(STeach)' and the 95% confidenc
 
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
+```{r}
+BTeach<- array(1:200)
+for(J in 1:200){
+  BTeach[J] = BrLw(odds = 4.43)
+}
+favstats(BTeach)
+STeach <- sort(BTeach)
+```
 
-
-
+The fair odds are 4.43, he will only lose 1 dollar.
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
