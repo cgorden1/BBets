@@ -90,12 +90,16 @@ The fair odds are 4.43, he will only lose 1 dollar.
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+```{r}
+BTeach<- array(1:200)
+for(J in 1:200){
+  BTeach[J] = BrLw(numClass = 28)
+}
+favstats(BTeach)
+STeach <- sort(BTeach)
+```
 
-
-
-
-
-
+To make it fair they would need to have 28 people in the class.
 
 # Discussion and Conclusion
 
