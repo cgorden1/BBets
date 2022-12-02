@@ -41,7 +41,35 @@ The function will be given a class_size by number of students, odds, and Number_
 ## the standard deviation and a 95% confidence interval for their earnings?
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
+```{r}
+STeach<- array(1:40)
+for(i in 1:40){
+  STeach[i] = BrLw()
+}
+histogram(STeach)
+favstats(STeach)
+```
 
+```{r}
+RTeach<- array(1:100)
+for(K in 1:100){
+  RTeach[K] = BrLw()
+}
+
+histogram(RTeach)
+favstats(RTeach)
+```
+
+```{r}
+BTeach <- array(1:200)
+for(J in 1:200){
+  BTeach[J] = BrLw()
+}
+histogram(BTeach)
+STeach <- sort(BTeach)
+favstats(BTeach)
+```
+The confidence level is 'r mean(STeach)' and r sd(STeach)' and the 95% confidence interval is `r mean(STeach)- 2*sd(STeach)' to 'r mean(STeach + 2*sd(STeach)'
 
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
 
